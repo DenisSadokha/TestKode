@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestKode</string>
+
+    <!-- Employee list -->
+
+    <string name="http_error">Что-то пошло не так</string>
+    <string name="base_hint_search">Введи имя, тег, почту…</string>
+    <string name="some_one_error_1">Какой-то сверхразум все сломал</string>
+    <string name="some_one_error_2">Постараемся быстро починить</string>
+    <string name="some_one_error_3">Попробовать снова</string>
+
+
+</resources>

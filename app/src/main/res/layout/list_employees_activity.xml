@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vg_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/et_search"
+                android:layout_alignTop="@+id/et_search"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+<!--                android:src="@drawable/ic_search" />-->
+
+            <ImageButton
+                android:id="@+id/iv_filter"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignTop="@+id/iv_search"
+                android:layout_alignEnd="@+id/et_search"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent" />
+<!--                android:src="@drawable/ic_bar" />-->
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/base_hint_search"
+                android:paddingStart="40dp"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_of_employees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="10"
+            tools:listitem="@layout/employee_item" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vg_error"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_fly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fly" />
+
+        <TextView
+            android:id="@+id/mes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_fly"
+            android:layout_centerHorizontal="true"
+            android:text="@string/some_one_error_1"
+            android:textColor="#050510"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mes1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/some_one_error_2"
+            android:textColor="#97979B"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mes2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/some_one_error_3"
+            android:textColor="#6534FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+
+</FrameLayout>
